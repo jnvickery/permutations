@@ -2,6 +2,7 @@
 	
    Programs used in SGF 2015 paper #2440
    "Permit Me to Permute: A Basic Introduction to Permutation Tests with SAS/IML" 
+   http://support.sas.com/resources/papers/proceedings15/2440-2015.pdf
 
 ************************************************************/
 
@@ -154,7 +155,7 @@ proc iml;
    do j = 1 to B;                            /* bootstrap loop */
       x = PermuteWithinRows(xobt);           /* call PermuteWithinRows module */   
       F = fmod(x);                           /* calculate F on permuted data */
-      fdist[j,] = F;                         /* store calc’d F in fdist vector */
+      fdist[j,] = F;                         /* store calcâ€™d F in fdist vector */
    end;
 
 /* compute p-value */
